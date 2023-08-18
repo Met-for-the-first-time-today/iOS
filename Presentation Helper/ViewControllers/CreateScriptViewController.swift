@@ -9,13 +9,13 @@ import UIKit
 
 class CreateScriptViewController: UIViewController {
 
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var scriptTextView: UITextView!
     @IBOutlet var findTXTButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         initUI()
-        // Do any additional setup after loading the view.
     }
     
     func initUI() {
@@ -29,7 +29,7 @@ class CreateScriptViewController: UIViewController {
         findTXTButton.layer.shadowOpacity = 0.4
     }
     
-    @IBAction func backButtonClicked(_ sender: Any) {
+    @IBAction func closeButtonClicked(_ sender: Any) {
         self.dismiss(animated: true)
     }
     

@@ -8,7 +8,9 @@
 import UIKit
 
 class EditViewController: UIViewController {
-
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var scriptTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,10 +18,12 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func EditfinishButtonClicked(_ sender: Any) {
     }
+    
     /*
     // MARK: - Navigation
 
