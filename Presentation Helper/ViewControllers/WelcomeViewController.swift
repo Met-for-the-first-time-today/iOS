@@ -64,7 +64,6 @@ class WelcomeViewController: UIViewController {
         }
 
         // TODO: 실제로 로그인 시도하는 코드 추가
-        
         let request = NSMutableURLRequest(url: URL(string: "http://52.78.48.244:53330/login")!)
         request.httpMethod = "POST" // 로그인 시 POST 요청으로 변경
         request.allHTTPHeaderFields = headers
@@ -77,20 +76,24 @@ class WelcomeViewController: UIViewController {
                 return
             } else if let httpResponse = response as? HTTPURLResponse {
                 print("Response Code: \(httpResponse.statusCode)")
-                
                 if let data = data {
-                    do {
-                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                        print("JSON Response: \(jsonResponse ?? [:])")
-                        // TODO: 로그인 응답 처리 로직 추가
-                    } catch {
-                        print("Error parsing JSON: \(error)")
+                    DispatchQueue.global().async {
+                        do {
+                            let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                            print("JSON Response: \(jsonResponse ?? [:])")
+                            // TODO: 로그인 응답 처리 로직 추가
+                            DispatchQueue.main.sync{
+                                let rootNavVC = self.storyboard?.instantiateViewController(identifier: "RootNavViewController") as! UINavigationController
+                                rootNavVC.modalPresentationStyle = .overFullScreen
+                                self.present(rootNavVC, animated: false)
+                            }
+                        } catch {
+                            print("Error parsing JSON: \(error)")
+                        }
                     }
                 }
             }
         }
-        print(dataTask)
-        
         dataTask.resume()
     }
 
