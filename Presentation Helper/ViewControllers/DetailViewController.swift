@@ -13,7 +13,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var scriptLabel: UILabel!
     
     var scriptData: ScriptModel?
-    
+    var titleValue: String = ""
+    var scriptValue: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -26,6 +27,8 @@ class DetailViewController: UIViewController {
         titleLabel.layer.cornerRadius = 8
         // scriptTextView
         scriptLabel.layer.cornerRadius = 8
+        titleLabel.text = titleValue
+        scriptLabel.text = scriptValue
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {

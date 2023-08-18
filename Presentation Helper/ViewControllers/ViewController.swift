@@ -79,10 +79,12 @@ class ViewController: UIViewController {
                    let dataArray = json["data"] as? [[String: Any]] {
                     for scriptData in dataArray {
                         if let title = scriptData["title"] as? String,
-                           let date = scriptData["createdAt"] as? String {
+                           let date = scriptData["createdAt"] as? String,
+                           let data = scriptData["data"] as? String{
                             let script = ScriptModel()
                             script.title = title
                             script.date = date
+                            script.script = data
                             self.scriptList.append(script)
 //                            print("Title: \(title)")
 //                            print("Date: \(date)")
@@ -133,7 +135,12 @@ extension ViewController: UITableViewDataSource , UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = self.storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        detailVC.titleValue = scriptList[indexPath.row].title
+        print(detailVC.titleValue)
+        detailVC.scriptValue = scriptList[indexPath.row].script
+        print(detailVC.scriptValue)
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
+
 }
 
