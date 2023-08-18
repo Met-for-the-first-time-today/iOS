@@ -28,6 +28,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tryLoginClicked(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set(idTextField.text!, forKey: "idKey")
+        defaults.set(passwordTextField.text, forKey: "passwordKey")
+        self.presentingViewController?.modalTransitionStyle = .crossDissolve
+        self.dismiss(animated: true)
     }
     /*
     // MARK: - Navigation

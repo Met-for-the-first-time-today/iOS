@@ -79,13 +79,22 @@ class WelcomeViewController: UIViewController {
                 if let data = data {
                     DispatchQueue.global().async {
                         do {
-                            let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                            print("JSON Response: \(jsonResponse ?? [:])")
-                            // TODO: 로그인 응답 처리 로직 추가
-                            DispatchQueue.main.sync{
-                                let rootNavVC = self.storyboard?.instantiateViewController(identifier: "RootNavViewController") as! UINavigationController
-                                rootNavVC.modalPresentationStyle = .overFullScreen
-                                self.present(rootNavVC, animated: false)
+                            if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                               let status = jsonResponse["status"] as? String,
+                               status == "success" {
+                                print("로그인 성공!")
+                                DispatchQueue.main.sync{
+                                    let rootNavVC = self.storyboard?.instantiateViewController(identifier: "RootNavViewController") as! UINavigationController
+                                    rootNavVC.modalPresentationStyle = .overFullScreen
+                                    self.present(rootNavVC, animated: false)
+                                }
+                                // 토큰 정보 파싱 및 활용 가능
+                                if let token = jsonResponse["data"] as? String {
+                                    print("토큰: \(token)")
+                                    // TODO: 토큰을 다음 요청에 사용하거나 저장할 수 있음
+                                }
+                            } else {
+                                print("로그인 실패 또는 응답 형식 오류")
                             }
                         } catch {
                             print("Error parsing JSON: \(error)")
