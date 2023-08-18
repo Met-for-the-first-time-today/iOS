@@ -18,8 +18,8 @@ class WelcomeViewController: UIViewController {
         
         // TODO: 로그인 정보 하드코딩
         let defaults = UserDefaults.standard
-        defaults.set("TST", forKey: "idKey")
-        defaults.set("test1234!@", forKey: "passwordKey")
+//        defaults.set("TST", forKey: "idKey")
+//        defaults.set("test1234!@", forKey: "passwordKey")
     }
     
     override func viewDidAppear(_ animated: Bool) {
