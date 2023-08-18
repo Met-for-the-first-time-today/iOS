@@ -18,11 +18,12 @@ class WelcomeViewController: UIViewController {
         
         // TODO: 로그인 정보 하드코딩
         let defaults = UserDefaults.standard
-        defaults.set("TEST", forKey: "idKey")
+        defaults.set("TST", forKey: "idKey")
         defaults.set("test1234!@", forKey: "passwordKey")
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print("WelcomeViewController - viewDidAppear")
         // 로그인 시도
         // TODO: tryLogin() == true
         tryLogin()
@@ -40,6 +41,7 @@ class WelcomeViewController: UIViewController {
     }
     
     func tryLogin() {
+        print("WelcomeViewController - tryLogin")
         let headers = ["Content-Type": "application/json"]
         let defaults = UserDefaults.standard
         
