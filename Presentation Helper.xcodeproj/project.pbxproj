@@ -23,6 +23,7 @@
 		2AE7E9002A8FD56500AC4444 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E8FF2A8FD56500AC4444 /* SignUpViewController.swift */; };
 		2AE7E9022A8FD80600AC4444 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E9012A8FD80600AC4444 /* WelcomeViewController.swift */; };
 		2AE7E9042A8FE22E00AC4444 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E9032A8FE22E00AC4444 /* MyPageViewController.swift */; };
+		2AE7E9082A8FE6E500AC4444 /* RootNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E9072A8FE6E500AC4444 /* RootNavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		2AE7E8FF2A8FD56500AC4444 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2AE7E9012A8FD80600AC4444 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2AE7E9032A8FE22E00AC4444 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		2AE7E9072A8FE6E500AC4444 /* RootNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				2AE7E8FD2A8FCB0600AC4444 /* LoginViewController.swift */,
 				2AE7E8FF2A8FD56500AC4444 /* SignUpViewController.swift */,
 				2A566ACE2A8F846100D74378 /* ViewController.swift */,
+				2AE7E9072A8FE6E500AC4444 /* RootNavViewController.swift */,
 				2AE7E9032A8FE22E00AC4444 /* MyPageViewController.swift */,
 				2A54C4582A8FB5E000E7DAE8 /* CreateScriptViewController.swift */,
 				2A1F57C82A8F935500A38490 /* DetailViewController.swift */,
@@ -195,6 +198,7 @@
 			files = (
 				2AE7E8FE2A8FCB0600AC4444 /* LoginViewController.swift in Sources */,
 				2A566ACF2A8F846100D74378 /* ViewController.swift in Sources */,
+				2AE7E9082A8FE6E500AC4444 /* RootNavViewController.swift in Sources */,
 				2AE7E9022A8FD80600AC4444 /* WelcomeViewController.swift in Sources */,
 				2A566AE12A8F882900D74378 /* ListTableViewCell.swift in Sources */,
 				2AE7E8FC2A8FBFF400AC4444 /* ScriptModel.swift in Sources */,
