@@ -785,6 +785,7 @@
                                         </state>
                                         <connections>
                                             <action selector="backButtonClicked:" destination="Lzi-Ww-PXs" eventType="touchUpInside" id="Vuh-3d-vwR"/>
+                                            <action selector="closeButtonClicked:" destination="iuY-sU-agh" eventType="touchUpInside" id="JrF-DS-w62"/>
                                             <action selector="closeButtonClicked:" destination="Fbj-hB-Wa7" eventType="touchUpInside" id="MeD-Kj-exV"/>
                                         </connections>
                                     </button>
@@ -814,7 +815,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myIDLabel" destination="eBO-4X-Hpr" id="0hq-Lg-rLA"/>
+                        <outlet property="myIDLabel" destination="MWf-Y9-VYy" id="Igd-OO-gzo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFt-fb-h7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -877,7 +878,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yvK-EX-SjS">
                                                 <rect key="frame" x="0.0" y="0.0" width="342" height="51.333333333333336"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDy-KJ-LUc">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TEST" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDy-KJ-LUc">
                                                         <rect key="frame" x="8" y="8" width="326" height="35.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="HDy-KJ-LUc" secondAttribute="height" multiplier="9:1" constant="9" id="mbf-pd-ufG"/>
@@ -893,7 +894,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oVS-jy-JEA">
                                                 <rect key="frame" x="0.0" y="76.333333333333343" width="342" height="52"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahg-4v-Fb7">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test1234!@" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahg-4v-Fb7">
                                                         <rect key="frame" x="8" y="8" width="326" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Ahg-4v-Fb7" secondAttribute="height" multiplier="9:1" id="7HZ-VA-2we"/>
@@ -1007,16 +1008,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="L7z-dv-SsS">
-                                <rect key="frame" x="0.0" y="103.00000000000001" width="390" height="244.33333333333337"/>
+                                <rect key="frame" x="0.0" y="102.99999999999997" width="390" height="321.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="doZ-9d-mjo">
-                                        <rect key="frame" x="24" y="24" width="342" height="129.33333333333334"/>
+                                        <rect key="frame" x="24" y="24" width="342" height="206.66666666666666"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0cP-Xu-KcD">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-Ey-PBx">
                                                 <rect key="frame" x="0.0" y="0.0" width="342" height="52.333333333333336"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-XT-naq">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-fn-FbQ">
                                                         <rect key="frame" x="8" y="8" width="326" height="36.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="fiP-fn-FbQ" secondAttribute="height" multiplier="9:1" id="Qvs-nR-l0s"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" name="LightYellow"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0cP-Xu-KcD">
+                                                <rect key="frame" x="0.0" y="77.333333333333343" width="342" height="52"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-XT-naq">
+                                                        <rect key="frame" x="8" y="8" width="326" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="pq9-XT-naq" secondAttribute="height" multiplier="9:1" id="3bs-1z-bYl"/>
                                                         </constraints>
@@ -1029,10 +1046,10 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="htI-6v-MfO">
-                                                <rect key="frame" x="0.0" y="77.333333333333343" width="342" height="52"/>
+                                                <rect key="frame" x="0.0" y="154.33333333333331" width="342" height="52.333333333333343"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-An-1Qt">
-                                                        <rect key="frame" x="8" y="8" width="326" height="36"/>
+                                                        <rect key="frame" x="8" y="8" width="326" height="36.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="b8a-An-1Qt" secondAttribute="height" multiplier="9:1" id="HPv-Pc-sg0"/>
                                                         </constraints>
@@ -1047,10 +1064,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="M57-TO-Gcf">
-                                        <rect key="frame" x="24" y="177.33333333333331" width="342" height="43"/>
+                                        <rect key="frame" x="24" y="254.66666666666666" width="342" height="42.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXV-6y-6TR">
-                                                <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="342" height="42.666666666666664"/>
                                                 <color key="backgroundColor" name="LightBlue"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RXV-6y-6TR" secondAttribute="height" multiplier="8:1" id="d6x-w4-dKh"/>
@@ -1088,7 +1105,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="signupIDTextField" destination="pq9-XT-naq" id="bvw-Vq-fXZ"/>
+                        <outlet property="signupPWTextField" destination="b8a-An-1Qt" id="Uel-S7-nyG"/>
                         <outlet property="trySignupButton" destination="RXV-6y-6TR" id="wXz-6L-XcV"/>
+                        <outlet property="usernameTextField" destination="fiP-fn-FbQ" id="jHq-zE-v4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ktf-Ly-7Fj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
