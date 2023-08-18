@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var listTableView: UITableView!
+    @IBOutlet var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,22 @@ class ViewController: UIViewController {
         listTableView.register(listTableViewCell, forCellReuseIdentifier: "ListTableViewCell")
         // 네비게이션 바
         self.navigationController?.navigationBar.isHidden = true
+        // addButton
+        addButton.layer.cornerRadius = addButton.frame.height / 2
+        addButton.layer.shadowColor = UIColor.black.cgColor
+        addButton.layer.masksToBounds = false
+        addButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        addButton.layer.shadowRadius = 5
+        addButton.layer.shadowOpacity = 0.4
         
     }
 
-
+    @IBAction func addButtonClicked(_ sender: Any) {
+        let addScriptVC = self.storyboard?.instantiateViewController(identifier: "AddScriptViewController") as! CreateScriptViewController
+        addScriptVC.modalPresentationStyle = .overFullScreen
+        self.present(addScriptVC, animated: true)
+    }
+    
 }
 extension ViewController: UITableViewDataSource , UITableViewDelegate{
     
