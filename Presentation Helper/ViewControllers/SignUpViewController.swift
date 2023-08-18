@@ -39,9 +39,14 @@ class SignUpViewController: UIViewController {
             print("JSON 데이터 변환 오류")
             return
         }
+        
+        guard let port = UserDefaults.standard.string(forKey: "port") else {
+            print("port 없음")
+            return
+        }
 
         // TODO: 실제로 로그인 시도하는 코드 추가
-        let request = NSMutableURLRequest(url: URL(string: "http://52.78.48.244:53330/sign")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://\(port)/sign")!)
         request.httpMethod = "POST" // 로그인 시 POST 요청으로 변경
         request.allHTTPHeaderFields = headers
         request.httpBody = postData

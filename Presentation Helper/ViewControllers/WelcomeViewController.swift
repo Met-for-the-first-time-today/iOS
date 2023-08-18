@@ -17,8 +17,7 @@ class WelcomeViewController: UIViewController {
         initUI()
         
         // TODO: 로그인 정보 하드코딩
-        let defaults = UserDefaults.standard
-//        defaults.set("TST", forKey: "idKey")
+        UserDefaults.standard.set("52.78.48.244:53393", forKey: "port")
 //        defaults.set("test1234!@", forKey: "passwordKey")
     }
     
@@ -53,6 +52,10 @@ class WelcomeViewController: UIViewController {
             print("passwordKey 없음")
             return
         }
+        guard let port = defaults.string(forKey: "port") else {
+            print("port 없음")
+            return
+        }
         
         // HTTP 요청 파라미터 설정
         let loginParameters = [
@@ -66,7 +69,7 @@ class WelcomeViewController: UIViewController {
         }
 
         // TODO: 실제로 로그인 시도하는 코드 추가
-        let request = NSMutableURLRequest(url: URL(string: "http://52.78.48.244:53330/login")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://\(port)/login")!)
         request.httpMethod = "POST" // 로그인 시 POST 요청으로 변경
         request.allHTTPHeaderFields = headers
         request.httpBody = postData

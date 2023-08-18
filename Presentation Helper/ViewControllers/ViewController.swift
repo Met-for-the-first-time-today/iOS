@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             return
         }
 
-        let urlString = "http://52.78.48.244:53330/script/search?token=\(token)"
+        let urlString = "http://52.78.48.244:53393/script/search?token=\(token)"
         if let url = URL(string: urlString) {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
