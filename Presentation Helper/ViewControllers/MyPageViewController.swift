@@ -1,32 +1,26 @@
 //
-//  EditViewController.swift
+//  MyPageViewController.swift
 //  Presentation Helper
 //
-//  Created by 서정덕 on 2023/08/18.
+//  Created by 서정덕 on 2023/08/19.
 //
 
 import UIKit
 
-class EditViewController: UIViewController {
-    @IBOutlet var titleTextField: UITextField!
-    @IBOutlet var scriptTextView: UITextView!
-    
+class MyPageViewController: UIViewController {
+
+    @IBOutlet var myIDLabel: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    func setData(script: ScriptModel) {
-        titleTextField.text = script.title
-        scriptTextView.text = script.script
-    }
-    
-    @IBAction func backButtonClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func EditfinishButtonClicked(_ sender: Any) {
+    @IBAction func logoutButtonClicked(_ sender: Any) {
+        // TODO: 로그인 정보 초기화
+        let welcomeVC = storyboard?.instantiateViewController(identifier: "WelcomeViewController") as! WelcomeViewController
+        welcomeVC.modalPresentationStyle = .overFullScreen
+        present(welcomeVC, animated: true)
     }
     
     /*

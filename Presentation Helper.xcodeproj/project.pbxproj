@@ -19,6 +19,10 @@
 		2A566AE12A8F882900D74378 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A566ADF2A8F882900D74378 /* ListTableViewCell.swift */; };
 		2A566AE22A8F882900D74378 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A566AE02A8F882900D74378 /* ListTableViewCell.xib */; };
 		2AE7E8FC2A8FBFF400AC4444 /* ScriptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E8FB2A8FBFF400AC4444 /* ScriptModel.swift */; };
+		2AE7E8FE2A8FCB0600AC4444 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E8FD2A8FCB0600AC4444 /* LoginViewController.swift */; };
+		2AE7E9002A8FD56500AC4444 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E8FF2A8FD56500AC4444 /* SignUpViewController.swift */; };
+		2AE7E9022A8FD80600AC4444 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E9012A8FD80600AC4444 /* WelcomeViewController.swift */; };
+		2AE7E9042A8FE22E00AC4444 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7E9032A8FE22E00AC4444 /* MyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		2A566ADF2A8F882900D74378 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		2A566AE02A8F882900D74378 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		2AE7E8FB2A8FBFF400AC4444 /* ScriptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptModel.swift; sourceTree = "<group>"; };
+		2AE7E8FD2A8FCB0600AC4444 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2AE7E8FF2A8FD56500AC4444 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2AE7E9012A8FD80600AC4444 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2AE7E9032A8FE22E00AC4444 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +60,14 @@
 		2A1F57C72A8F931200A38490 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2AE7E9012A8FD80600AC4444 /* WelcomeViewController.swift */,
+				2AE7E8FD2A8FCB0600AC4444 /* LoginViewController.swift */,
+				2AE7E8FF2A8FD56500AC4444 /* SignUpViewController.swift */,
 				2A566ACE2A8F846100D74378 /* ViewController.swift */,
+				2AE7E9032A8FE22E00AC4444 /* MyPageViewController.swift */,
+				2A54C4582A8FB5E000E7DAE8 /* CreateScriptViewController.swift */,
 				2A1F57C82A8F935500A38490 /* DetailViewController.swift */,
 				2A54C4562A8FB5BD00E7DAE8 /* EditViewController.swift */,
-				2A54C4582A8FB5E000E7DAE8 /* CreateScriptViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -181,10 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE7E8FE2A8FCB0600AC4444 /* LoginViewController.swift in Sources */,
 				2A566ACF2A8F846100D74378 /* ViewController.swift in Sources */,
+				2AE7E9022A8FD80600AC4444 /* WelcomeViewController.swift in Sources */,
 				2A566AE12A8F882900D74378 /* ListTableViewCell.swift in Sources */,
 				2AE7E8FC2A8FBFF400AC4444 /* ScriptModel.swift in Sources */,
+				2AE7E9002A8FD56500AC4444 /* SignUpViewController.swift in Sources */,
 				2A54C4572A8FB5BD00E7DAE8 /* EditViewController.swift in Sources */,
+				2AE7E9042A8FE22E00AC4444 /* MyPageViewController.swift in Sources */,
 				2A54C4592A8FB5E000E7DAE8 /* CreateScriptViewController.swift in Sources */,
 				2A1F57C92A8F935500A38490 /* DetailViewController.swift in Sources */,
 				2A566ACB2A8F846100D74378 /* AppDelegate.swift in Sources */,

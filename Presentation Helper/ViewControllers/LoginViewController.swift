@@ -1,34 +1,34 @@
 //
-//  EditViewController.swift
+//  LoginViewController.swift
 //  Presentation Helper
 //
-//  Created by 서정덕 on 2023/08/18.
+//  Created by 서정덕 on 2023/08/19.
 //
 
 import UIKit
 
-class EditViewController: UIViewController {
-    @IBOutlet var titleTextField: UITextField!
-    @IBOutlet var scriptTextView: UITextView!
+class LoginViewController: UIViewController {
+
+    @IBOutlet var idTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var tryLoginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initUI()
         // Do any additional setup after loading the view.
     }
     
-    func setData(script: ScriptModel) {
-        titleTextField.text = script.title
-        scriptTextView.text = script.script
+    func initUI() {
+        tryLoginButton.layer.cornerRadius = 8
     }
     
-    @IBAction func backButtonClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func closeButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     
-    @IBAction func EditfinishButtonClicked(_ sender: Any) {
+    @IBAction func tryLoginClicked(_ sender: Any) {
     }
-    
     /*
     // MARK: - Navigation
 

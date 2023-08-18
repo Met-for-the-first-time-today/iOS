@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var scriptLabel: UILabel!
     
+    var scriptData: ScriptModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -19,10 +21,11 @@ class DetailViewController: UIViewController {
     }
     
     func initUI(){
-//        // titleTextField
-//        titleTextField.layer.cornerRadius = 8
-//        // scriptTextView
-//        scriptTextView.layer.cornerRadius = 8
+        
+        // titleLabel
+        titleLabel.layer.cornerRadius = 8
+        // scriptTextView
+        scriptLabel.layer.cornerRadius = 8
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
@@ -30,7 +33,13 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func editButtonClicked(_ sender: Any) {
+        print("DetailViewController - editButtonClicked")
         let editVC = self.storyboard?.instantiateViewController(identifier: "EditViewController") as! EditViewController
+        if scriptData == nil {
+            print("scriptData 없음")
+            return
+        }
+        editVC.setData(script: scriptData!)
         self.navigationController?.pushViewController(editVC, animated: true)
     }
 }
