@@ -8,7 +8,9 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var rootView: UIView!
+    @IBOutlet var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

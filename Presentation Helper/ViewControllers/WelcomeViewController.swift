@@ -92,6 +92,7 @@ class WelcomeViewController: UIViewController {
                                 }
                                 // 토큰 정보 파싱 및 활용 가능
                                 if let token = jsonResponse["data"] as? String {
+                                    UserDefaults.standard.set(token, forKey: "token")
                                     print("토큰: \(token)")
                                     // TODO: 토큰을 다음 요청에 사용하거나 저장할 수 있음
                                 }
@@ -108,9 +109,6 @@ class WelcomeViewController: UIViewController {
         dataTask.resume()
     }
 
-
-
-    
     @IBAction func loginButtonClicked(_ sender: Any) {
         let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
         loginVC.modalPresentationStyle = .overFullScreen
